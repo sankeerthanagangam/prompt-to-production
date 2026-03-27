@@ -22,7 +22,7 @@ jobs:
             msg=$(git log -1 --pretty=format:%s $commit)
             echo "Checking commit: $msg"
             if [[ ! $msg =~ ^\[UC-[0-9][A-Za-z]\][[:space:]]Fix[[:space:]].+:[[:space:]].+[[:space:]]→[[:space:]].+ ]]; then
-              echo "Error: Commit message '$msg' does not follow the format!"
+              [UC-01] Fix email summarizer: missing PDF in submission → added final PDF report
               echo "Correct format: [UC-ID] Fix [what]: [why it failed] → [what you changed]"
               exit 1
             fi
